@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub | Online Learning</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e293b;
+        }
+
+        header {
+            background: #172554;
+            color: white;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            color: #60a5fa;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+        }
+
+        .hero {
+            padding: 75px 8%;
+            background: linear-gradient(120deg, #172554, #2563eb);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .hero button {
+            margin-top: 25px;
+            padding: 13px 24px;
+            background: white;
+            color: #1d4ed8;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .courses {
+            padding: 45px 8%;
+        }
+
+        .courses h2 {
+            margin-bottom: 25px;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .course {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #00000010;
+        }
+
+        .course .emoji {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .course h3 {
+            margin-bottom: 10px;
+        }
+
+        .course p {
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        footer {
+            background: #172554;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>LearnHub</h2>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Learn Skills. Build Your Future.</h1>
+        <p>Explore practical courses and develop skills for your career.</p>
+        <button onclick="document.getElementById('courses').scrollIntoView()">
+            Explore Courses
+        </button>
+    </section>
+
+    <section class="courses" id="courses">
+        <h2>Popular Courses</h2>
+
+        <div class="course-grid">
+            <div class="course">
+                <div class="emoji">🐧</div>
+                <h3>Linux Fundamentals</h3>
+                <p>Learn Linux commands, file systems and server basics.</p>
+            </div>
+
+            <div class="course">
+                <div class="emoji">🐳</div>
+                <h3>Docker Essentials</h3>
+                <p>Understand containers and application deployment.</p>
+            </div>
+
+            <div class="course">
+                <div class="emoji">☁️</div>
+                <h3>Cloud Computing</h3>
+                <p>Explore cloud infrastructure and deployment concepts.</p>
+            </div>
+
+            <div class="course">
+                <div class="emoji">⚙️</div>
+                <h3>DevOps Fundamentals</h3>
+                <p>Discover automation, CI/CD and DevOps workflows.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="about">
+        <p>LearnHub | Universal DevOps Deployment Platform Demo</p>
+        <p>Built for learning and deployment automation.</p>
+    </footer>
+
+</body>
+</html>
